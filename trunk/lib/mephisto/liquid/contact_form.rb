@@ -1,15 +1,6 @@
 module Mephisto
   module Liquid
     class ContactForm < ::Liquid::Block
-    
-      def initialize(markup, tokens)
-        super 
-        @attributes = { :destination_email => 'root@localhost' }
-      
-        markup.scan(Liquid::TagAttributes) do |key, value|
-          @attributes[key.to_sym] = value
-        end
-      end
 
       def render(context)
         result = []
