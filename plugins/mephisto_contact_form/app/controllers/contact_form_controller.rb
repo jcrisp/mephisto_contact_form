@@ -1,4 +1,5 @@
 class ContactFormController < ApplicationController
+  unloadable
 
   def contact_form
       render_liquid_template_for(:contact_us, :status => "200 OK")
