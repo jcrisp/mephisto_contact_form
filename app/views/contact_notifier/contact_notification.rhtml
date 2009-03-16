@@ -1,6 +1,6 @@
-From: <%= @contact_message.author %> (<%= @contact_message.author_email %><%= 
-  @contact_message.author_phone == "" ? "" : ", " + @contact_message.author_phone %>)
-Subject: <%= @contact_message.subject %>
+From: <%=h @contact_message.author %> (<%=h @contact_message.author_email %><%= 
+  @contact_message.author_phone == "" ? "" : ", " + h(@contact_message.author_phone) %>)
+Subject: <%=h @contact_message.subject %>
 
-<%= @contact_message.body %>
+<%=h @contact_message.body %>
 
